@@ -42,15 +42,21 @@ public interface IBitStringCompressor
     {
     }
 
+    //Compression Test
     [Test]
     public void CompressionTest()
     {
-        //compressed assert.equal(00a111b)
-        Assert.Pass();
+        string umcompressed;
+        string compressed = IBitStringCompressor.Compress(uncompressed);
+        Assert.AreEqual("13", compressed);
     }
+    //Decompression Test
     [Test]
     public void DecompressionTest()
     {
+        string uncompressed;
+        string compressed = IBitStringCompressor.Compress(uncompressed);
 
-        Assert.Pass();
+        string decompressed = IBitStringCompressor.Decompress(compressed);
+        Assert.AreEqual(uncompressed, decompressed);
     }
