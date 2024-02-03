@@ -97,3 +97,11 @@ C:\Users\alext\OneDrive\Desktop\CompressionProj\obj\Debug\net7.0\refint\Compress
 C:\Users\alext\OneDrive\Desktop\CompressionProj\obj\Debug\net7.0\CompressionProj.pdb
 C:\Users\alext\OneDrive\Desktop\CompressionProj\obj\Debug\net7.0\CompressionProj.genruntimeconfig.cache
 C:\Users\alext\OneDrive\Desktop\CompressionProj\obj\Debug\net7.0\ref\CompressionProj.dll
+C:\Users\chynar.bazarmuhammed\my-code-dir\DS\CompressionProj\obj\Debug\net7.0\CompressionProj.csproj.AssemblyReference.cache
+C:\Users\chynar.bazarmuhammed\my-code-dir\DS\CompressionProj\obj\Debug\net7.0\CompressionProj.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chynar.bazarmuhammed\my-code-dir\DS\CompressionProj\obj\Debug\net7.0\CompressionProj.AssemblyInfoInputs.cache
+C:\Users\chynar.bazarmuhammed\my-code-dir\DS\CompressionProj\obj\Debug\net7.0\CompressionProj.AssemblyInfo.cs
+C:\Users\chynar.bazarmuhammed\my-code-dir\DS\CompressionProj\obj\Debug\net7.0\CompressionProj.csproj.CoreCompileInputs.cache
+C:\Users\chynar.bazarmuhammed\my-code-dir\DS\CompressionProj\obj\Debug\net7.0\CompressionProj.dll
+C:\Users\chynar.bazarmuhammed\my-code-dir\DS\CompressionProj\obj\Debug\net7.0\refint\CompressionProj.dll
+C:\Users\chynar.bazarmuhammed\my-code-dir\DS\CompressionProj\obj\Debug\net7.0\CompressionProj.pdb

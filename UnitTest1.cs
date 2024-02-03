@@ -36,19 +36,51 @@ public class EncodeDecode : IBitStringCompressor
         }
         return compressed;
     }
-    public string Decompress(string compressed)
-    {
-        // text_Byte = compressed.Compress();//waiting for compress fuction
-        // char[13] output;
-
-        // foreach (char i in text_Byte)
-        // {
-        //     output.Append(i);
-        // }
-        // return output;
-        return "";
-    }
+   
 }
+
+
+public string Decompress(string compressed)
+        {
+            StringBuilder decompressed = new StringBuilder();
+
+            int i = 0;
+            while (i < compressed.Length)
+            {
+                char current = compressed[i];
+
+                if (IsMarker(current))
+                {
+                    // Assume next few characters define offset and length
+                    // For simplicity, let's say offset and length are each one digit (highly simplified)
+                    int offset = Int32.Parse(compressed.Substring(i + 1, 1));
+                    int length = Int32.Parse(compressed.Substring(i + 2, 1));
+                    int startCopyIndex = decompressed.Length - offset;
+                    for (int j = 0; j < length; j++)
+                    {
+                        decompressed.Append(decompressed[startCopyIndex + j]);
+                    }
+                    i += 3; // Move past marker, offset, and length
+                }
+                else
+                {
+                    decompressed.Append(current);
+                    i++;
+                }
+            }
+
+            return decompressed.ToString();
+        }
+
+        private bool IsMarker(char c)
+        {
+            // Determine if a character is a marker for an encoded sequence
+            // Placeholder implementation
+            return c == 'X'; // Example marker character
+        }
+    
+
+
 public class Test
 {
     [SetUp]
@@ -65,15 +97,11 @@ public class Test
         string result = test.Compress(uncompressed);
         Assert.AreEqual("0100110101", result);
     }
-    // Decompression Test
-    //Syntax error
-    // [Test]
-    // public void DecompressionTest()
-    // {
-    //     string uncompressed;
-    //     string compressed = IBitStringCompressor.Compress(uncompressed);
-
-    //     string decompressed = IBitStringCompressor.Decompress(compressed);
-    //     Assert.AreEqual(uncompressed, decompressed);
-    // }
+    public void DecompressionTest()
+        {
+            EncodeDecode test = new EncodeDecode();
+            string compressed = "01X101X201"; 
+            string decompressed = test.Decompress(compressed);
+            Assert.AreEqual("01010101", decompressed); 
+        }
 }
